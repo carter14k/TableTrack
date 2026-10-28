@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TableTrack</h1>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="add-order.html">Add Order</a>
+            <a href="orders.html">Orders</a>
+        </nav>
+    </header>
+
+    <main class="sales">
+        <section>
+            <h2>Total Sales</h2>
+            <p id="totalSalesValue">KSh 0.00</p>
+        </section>
+
+        <section>
+            <h2>Total Order Count</h2>
+            <p id="totalOrderCountValue">0</p>
+        </section>
+
+        <section>
+            <h2>Best-Selling Dish</h2>
+            <p id="bestSells">No orders yet</p>
+        </section>
+
+        <section>
+            <h2>Category Sales Chart</h2>
+            <div id="category">
+                <p>No sales data available yet.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Recent Orders</h2>
+
+            <p id="emptyOrdersMessage">
+                No orders yet.
+                <a href="add-order.html">Add your first order</a>.
+            </p>
+
+            <table>
+                <caption>Recently recorded restaurant orders</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Table</th>
+                        <th scope="col">Dish</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="recentOrdersBody">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <small>TableTrack &copy; 2026. Restaurant orders and sales tracking.</small>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
