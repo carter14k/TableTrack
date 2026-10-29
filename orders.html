@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableTrack | Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TableTrack</h1>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="add-order.html">Add Order</a>
+            <a href="orders.html">Orders</a>
+        </nav>
+    </header>
+    <main>
+        <h2>All Orders</h2>
+        <search>
+            <label for="search">Search orders:</label>
+            <input type="text" id="search" placeholder="dish name">
+        </search>
+        <section>
+            <label for="category">Category:</label>
+        <select id="category">
+            <option value="">All Categories</option>
+            <option value="starter">Starter</option>
+                <option value="main">Main</option>
+                <option value="drink">Drink</option>
+                <option value="dessert">Dessert</option>
+        </select>
+        </section>
+        
+        <section>
+            <table>
+                <caption>Orders Table</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Table</th>
+                        <th scope="col">Dish</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody">No orders Found</tbody>
+            </table>
+                
+        </section>
+        <p id="emptyState"></p>
+    </main>
+    
+      <footer>
+        <small>TableTrack &copy; 2026. Restaurant orders and sales tracking.</small>
+    </footer>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
