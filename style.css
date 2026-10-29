@@ -55,6 +55,7 @@ input,select{
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 5px;
+    width: 100%;
 }
 button{
     padding: 10px 16px;
@@ -63,6 +64,7 @@ button{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-self: flex-start;
 }
 footer{
     background-color: rgb(44, 44, 95);
