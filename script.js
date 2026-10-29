@@ -25,8 +25,8 @@ const total = order.quantity * order.unitPrice;
 order.total = total;
 orders.push(order);
 localStorage.setItem("orders",JSON.stringify(orders));
-displayOrders();
-    
+
+
 console.log(tbody)
 console.log(order);
 });
@@ -34,7 +34,7 @@ console.log(order);
 function displayOrders() {
     tbody.innerHTML = "";
 
-    orders.forEach(function(order) {
+    orders.forEach(function(order,index) {
         const row = document.createElement("tr");
 
         row.innerHTML = `
@@ -45,12 +45,21 @@ function displayOrders() {
             <td>${order.quantity}</td>
             <td>${order.unitPrice}</td>
             <td>${order.total}</td>
-            <td>Delete</td>
+            <td>
+            <button onclick="deleteOrder(${index})">Delete</button>
+            </td>
         `;
 
         tbody.appendChild(row);
     });
 }
 if(tbody){
+    displayOrders();
+}
+function deleteOrder(index) {
+    orders.splice(index, 1);
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+
     displayOrders();
 }
